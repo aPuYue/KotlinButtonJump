@@ -13,10 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var bt1 = findViewById(R.id.button1) as Button //在获取
+        var bt1 = findViewById(R.id.button1) as Button
         bt1.setOnClickListener {
-            var intent = Intent()
-            intent.setClass(this,Main2Activity::class.java)
+            var intent = Intent(this,Main2Activity::class.java)
+            intent.putExtra("id", "3");
+            intent.putExtra("name", "Tom")
             startActivity(intent)
         }
     }
