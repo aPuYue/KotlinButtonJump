@@ -11,13 +11,9 @@ class Main2Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        if (intent != null) {
-            val intent = getIntent()
-            val id = intent.getStringExtra("id")
-            val name = intent.getStringExtra("name")
-            println("###" + id + name)
-        } else {
-
-        }
+        val intent = getIntent()
+        val id = intent.getStringExtra("id")
+        val name = intent.getStringExtra("name")
+        println("###" + id + name)
     }
 }
